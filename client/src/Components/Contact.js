@@ -18,18 +18,15 @@ const Contact = () => {
 
   const sendMessage = (e) => {
     e.preventDefault();
-    const data = new FormData();
-    data.append("email", email);
-    data.append("subject", subject);
-    data.append("message", message);
+    const data = { email, subject, message }; 
 
-    const url = "http://localhost:5000/api/contact"; 
+    const url = "/api/contact"; 
 
     axios
       .post(url, data)
       .then((response) => {
         console.log(response);
-        resetForm(); 
+        resetForm();
       })
       .catch((error) => {
         console.log(error);

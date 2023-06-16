@@ -49,7 +49,7 @@ const HouseListingForm = () => {
   
   return (
     <div className="HouseListing_Container">
-      <div className="form">
+      <form onSubmit={listProperty}>
         <label>House Price</label>
         <input
           type="number"
@@ -101,14 +101,15 @@ const HouseListingForm = () => {
           onChange={(e) => setNumOfGarages(e.target.value)}
           value={numOfGarages}
         />
+                <label>House Image</label>
         <input
         type="url"
-        placeholder="image"
+        placeholder="House Image"
         onChange={(e)=> setHouseImage(e.target.value)}
         value={houseImage}
         />
-        <button onClick={listProperty}>LIST YOUR PROPERTY</button>
-      </div>
+        <button type="submit">LIST YOUR PROPERTY</button>
+      </form>
     </div>
   );
 };

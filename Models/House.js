@@ -9,7 +9,7 @@ const HouseSchema = mongoose.Schema({
     numOfBedRooms: { type: Number, required: true },
     numOfBathRooms: { type: Number, required: true },
     numOfGarages: { type: Number, required: true },
-    // houseImage: { type: String, required: true } // Fix: Change the type to String
+     houseImage: { type: String, required: true } 
 });
 
 const House = mongoose.model('House', HouseSchema);

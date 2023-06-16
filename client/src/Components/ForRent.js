@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { houseForRentAction } from "../store/Actions/HouseFetchAction";
+import './Stylesheets/ForRent.css';
 
 const ForRent = () => {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ const ForRent = () => {
         <p>Error: {error}</p>
       ) : (
         houseForRentList.map((house) => (
-          <div className="HouseListing_Container" key={house.id}>
+          <div className="HouseListing_Container" key={house._id}>
             <p>Price: {house.price}</p>
             <p>City: {house.city}</p>
             <p>Province: {house.province}</p>
@@ -28,6 +29,8 @@ const ForRent = () => {
             <p>Bathrooms: {house.numOfBathRooms}</p>
             <p>Garages: {house.numOfGarages}</p>
             <p>Sale or Rent: {house.isSaleOrRent}</p>
+            <img src={house.houseImage} alt="rent"/>
+
           </div>
         ))
       )}

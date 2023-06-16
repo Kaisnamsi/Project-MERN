@@ -1,48 +1,51 @@
+
 .HouseListing_Container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.form {
-  width: 400px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  background-color: #f8f8f8;
-  border-radius: 8px;
+  margin: 10px;
+  width: 400px;
 }
 
-.form label {
-  font-size: 14px;
+.HouseListing_Container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.HouseListing_Container label {
+  margin-top: 10px;
   font-weight: bold;
-  margin-bottom: 8px;
 }
 
-.form input,
-.form select {
-  width: 100%;
+.HouseListing_Container input,
+.HouseListing_Container select {
   padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 12px;
 }
 
-.form button {
-  width: 100%;
-  padding: 12px;
+.HouseListing_Container button[type="submit"] {
   background-color: #4caf50;
-  color: white;
+  color: #fff;
+  padding: 10px 15px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
 }
 
-.form button:hover {
+.HouseListing_Container button[type="submit"]:hover {
   background-color: #45a049;
 }
 
-.form div {
-  font-size: 12px;
-  margin-bottom: 8px;
+.HouseListing_Container input[type="url"]::placeholder {
+  color: #999;
+}
+
+.HouseListing_Container input[type="number"]::-webkit-inner-spin-button,
+.HouseListing_Container input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
